@@ -27,9 +27,10 @@ When you deploy this website to Azure you can define the [Backend](https://githu
 
 > Note: you can change the InstrumentationKey of the **Application Insight** that is configured by default.
 
-In order to change the backend change the `apiBaseUrl` parameter on the ARM template provided to the url where your aks is configured.
+In order to change the backend, set `apiBaseUrl` parameter on the ARM template provided to the url where your aks is configured.
 
-e.g. In order to know your aks route, if configured with `addon-http-application-routing` ingress class (as its by default) you could run 
+e.g. In order to know your aks route, if configured with `addon-http-application-routing` ingress class (as it's by default) you could run 
+
 ```
 az aks show -n <aks-name> -g <resource-group> --query "addonProfiles.httpApplicationRouting.config.HTTPApplicationRoutingZoneName"
 ```
